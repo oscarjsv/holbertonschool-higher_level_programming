@@ -2,6 +2,6 @@
 ''' this a comment in python '''
 
 
-class Square:   
+class Square:
     ''' Empty  class square '''
     pass
