@@ -1,75 +1,45 @@
-First import ``print_square``
+The ``3-say_my_name`` module and task 2
+======================
 
+Using ``say_my_name`` function
+-------------------
+
+Importing the function from the module:
     >>> print_square = __import__('4-print_square').print_square
 
+Print a square of size 4:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
 
-Test cases:
+Print a square of size 6:
+    >>> print_square(6)
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
 
-    # normal behavior 1.
-    -------------------
-    >>> print_square(1)
-    #
-
-
-
-    # normal behavior 2.
-    -----------------------------------
-    >>> print_square(2)
-    ##
-    ##
-
-
-
-    #case0: 'size' is a negative 'int'.
-    -------------------------------------
-    >>> print_square(-1)
+Type size is float:
+    >>> print_square(6.0)
     Traceback (most recent call last):
-    ...
-    ValueError: size must be >= 0
+	...
+    TypeError: size must be an integer
 
-
-
-    # case1: 'size' is '0', return nothing !.
-    -----------------------------------------
+Size is zero:
     >>> print_square(0)
 
+Size is less than zero:
+    >>> print_square(-23)
+    Traceback (most recent call last):
+	...
+    ValueError: size must be >= 0
 
-
-    # case2: 'size' is None.
-    -------------------------------------
-    >>> print_square(None)
+Non argument:
+    >>> print_square()
     Traceback (most recent call last):
     ...
-    TypeError: size must be an integer
-
-
-
-    # case3: 'size' is a positive 'float'.
-    -------------------------------------
-    >>> print_square(1.4)
-    Traceback (most recent call last):
-    ...
-    TypeError: size must be an integer
-
-
-
-    # case4: 'size' is a negative 'float'.
-    -------------------------------------
-    >>> print_square(-1.4)
-    Traceback (most recent call last):
-    ...
-    TypeError: size must be an integer
-
-
-
-    # case5: 'size' is a True 'bool' type:
-    --------------------------------------
-    >>> print_square(True)
-    #
-
-
-
-    # case6: 'size' is a False 'bool' type:
-    --------------------------------------
-    >>> print_square(False)
-
+    TypeError: print_square() missing 1 required positional argument: 'size'
