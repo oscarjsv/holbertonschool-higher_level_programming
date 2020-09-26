@@ -21,4 +21,4 @@ def print_square(size):
 
     size = int(size)
     for _ in range(size):
-        print('#' * size)
+        print(size * '#')
