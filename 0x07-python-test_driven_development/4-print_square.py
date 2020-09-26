@@ -20,5 +20,5 @@ def print_square(size):
         raise ValueError('size must be >= 0')
 
     size = int(size)
-    for i in range(size):
+    for _ in range(size):
         print('#' * size)
