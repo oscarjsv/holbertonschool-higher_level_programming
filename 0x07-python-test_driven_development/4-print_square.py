@@ -11,5 +11,6 @@ def print_square(size):
     elif type(size) == float and size < 0:
         raise TypeError('size must be an integer')
 
-    for a in range(size):
-        print(size * "#")
+    size = int(size)
+    for i in range(size):
+        print('#' * size)
