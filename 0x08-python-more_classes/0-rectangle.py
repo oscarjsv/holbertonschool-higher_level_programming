@@ -6,7 +6,4 @@
 class Rectangle:
     """class rectangle
     """
-
-    def __init__(self):
-        ''' constuctor'''
-        pass
+    pass
