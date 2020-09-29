@@ -53,7 +53,11 @@ class Rectangle:
         return (self.__width + self.__height) * 2
 
     def __str__(self):
-        ''' str metodo '''
+        """string represention for information about
+            area and perimeter of a rectangle
+        Returns:
+            str -- information about the rectangle object
+        """
         if self.width == 0 or self.height == 0:
-            return 0
+            return ""
         return (("#" * self.width + "\n") * self.height)[:-1]
