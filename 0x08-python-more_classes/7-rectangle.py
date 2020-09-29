@@ -4,7 +4,7 @@
 
 class Rectangle:
     '''Form'''
-    print_symbol = '#   '
+    print_symbol = '#'
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -71,28 +71,3 @@ class Rectangle:
         ''' method del and number of instances'''
         print('Bye rectangle...')
         Rectangle.number_of_instances -= 1
-
-
-my_rectangle_1 = Rectangle(8, 4)
-print(my_rectangle_1)
-print("--")
-my_rectangle_1.print_symbol = "&"
-print(my_rectangle_1)
-print("--")
-
-my_rectangle_2 = Rectangle(2, 1)
-print(my_rectangle_2)
-print("--")
-Rectangle.print_symbol = "C"
-print(my_rectangle_2)
-print("--")
-
-my_rectangle_3 = Rectangle(7, 3)
-print(my_rectangle_3)
-
-print("--")
-
-my_rectangle_3.print_symbol = ["C", "is", "fun!"]
-print(my_rectangle_3)
-
-print("--")
