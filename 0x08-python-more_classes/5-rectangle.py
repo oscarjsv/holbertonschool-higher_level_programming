@@ -17,10 +17,6 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
-    def __del__(self):
-        ''' del method'''
-        return("Bye rectangle...")
-
     @property
     def width(self):
         """ width property
@@ -73,14 +69,3 @@ class Rectangle:
     def __repr__(self):
         ''' repr '''
         return 'Rectangle({}, {})'.format(self.__width, self.__height)
-
-
-my_rectangle = Rectangle(2, 4)
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
-
-del my_rectangle
-
-try:
-    print(my_rectangle)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
