@@ -22,6 +22,7 @@ class Rectangle(BaseGeometry):
     Arguments:
         BaseGeometry {class} -- super class
     """
+
     def __init__(self, width, height):
         """Rectangle with private height and width
         Arguments:
