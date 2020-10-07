@@ -13,6 +13,7 @@ class Square(Rectangle):
     Arguments:
         Rectangle {class} -- Class rectangle
     """
+
     def __init__(self, size):
         """ Square class that inherits from rectangle
         Arguments:
