@@ -12,10 +12,11 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        ''' return representation of a student '''
+        """to_json
+        """
+        dic = {}
         if attrs is None:
             return self.__dict__
-        dic = {}
         for i in attrs:
             if hasattr(self, i):
                 dic[i] = getattr(self, i)
