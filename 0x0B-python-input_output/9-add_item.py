@@ -10,14 +10,15 @@ import sys
 save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
+
 argv = sys.argv
-filename = 'add_item.json'
+filename = "add_item.json"
 obj = []
 
 try:
     obj = load_from_json_file(filename)
 except FileNotFoundError:
-    with open(filename, 'w', encoding='utf-8') as writer:
+    with open(filename, 'w') as fl:
         pass
 
 if obj:
