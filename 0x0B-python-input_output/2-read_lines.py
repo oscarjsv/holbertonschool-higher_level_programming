@@ -1,17 +1,24 @@
 #!/usr/bin/python3
-""" this module contains the read_lines function """
+"""Read lines
+"""
 
 
 def read_lines(filename="", nb_lines=0):
-    """ reads n lines of a file """
-    num_lines = 0
-    with open(filename) as text:
-        for line in text:
-            num_lines += 1
-            print(line, end="")
-            if nb_lines > 0:
-                if num_lines >= nb_lines:
-                    break
+    """Read lines function
+    Keyword Arguments:
+        filename {str} -- file name or path (default: {""})
+        nb_lines {int} -- number of lines (default: {0})
+    """
+    count = 0
+    with open(filename, 'r', encoding="UTF8") as f:
+        for _ in open(filename):
+            count += 1
+        if nb_lines <= 0 or nb_lines >= count:
+            print(f.read(), end="")
+        else:
+            for _ in range(nb_lines):
+                print(f.readline(), end="")
+    f.closed
 
 
 print("1 line:")
