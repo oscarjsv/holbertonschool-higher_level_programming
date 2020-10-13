@@ -77,8 +77,8 @@ class Rectangle(Base):
 
     def display(self):
         ''' method display the stdout # '''
-        s = '\n' * self.y + \
-            (' ' * self.x + '#' * self.width + '\n') * self.height
+        s = '\n' * self.__y + \
+            (' ' * self.__x + '#' * self.__width + '\n') * self.__height
         print(s, end='')
 
     def __str__(self):
