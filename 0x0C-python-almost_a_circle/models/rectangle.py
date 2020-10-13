@@ -88,28 +88,28 @@ class Rectangle(Base):
                                                  self.__width, self.__height)
 
     def update(self, *args, **kwargs):
-        """Update the class Rectangle"""
+        ''' method update '''
         if len(args):
-            for idx, value in enumerate(args):
+            for idx, valor in enumerate(args):
                 if idx == 0:
-                    self.id = value
+                    self.id = valor
                 if idx == 1:
-                    self.width = value
+                    self.__width = valor
                 if idx == 2:
-                    self.height = value
+                    self.__height = valor
                 if idx == 3:
-                    self.x = value
+                    self.__x = valor
                 if idx == 4:
-                    self.y = value
+                    self.__y = valor
         else:
             for key, value in kwargs.items():
-                if key == "id":
+                if key == 'id':
                     self.id = value
-                if key == "width":
+                if key == 'widht':
                     self.width = value
-                if key == "height":
+                if key == 'height':
                     self.height = value
-                if key == "x":
+                if key == 'x':
                     self.x = value
-                if key == "y":
-                    self.y = value
+                if key == 'y':
+                    self.y == value
