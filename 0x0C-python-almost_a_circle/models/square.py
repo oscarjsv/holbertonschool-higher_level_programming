@@ -36,7 +36,7 @@ class Square(Rectangle):
                 if idx == 0:
                     self.id = valor
                 if idx == 1:
-                    self.__size = valor
+                    self.size = valor
                 if idx == 3:
                     self.__x = valor
                 if idx == 4:
