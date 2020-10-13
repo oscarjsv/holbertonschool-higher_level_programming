@@ -29,24 +29,17 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        ''' method update '''
-        if len(args):
-            for idx, valor in enumerate(args):
-                if idx == 0:
-                    self.id = valor
-                if idx == 1:
-                    self.size = valor
-                if idx == 3:
-                    self.__x = valor
-                if idx == 4:
-                    self.__y = valor
-        else:
-            for key, value in kwargs.items():
-                if key == "id":
-                    self.id = value
-                if key == "size":
-                    self.size = value
-                if key == "x":
-                    self.x = value
-                if key == "y":
-                    self.y = value
+            """Update the square with keyword-argument"""
+            attributes = ['id', 'size', 'x', 'y']
+
+            for idx, x in enumerate(args):
+                if idx >= len(attributes):
+                    return
+
+                self.__setattr__(attributes[idx], x)
+
+            if args:
+                return
+
+            for k, v in kwargs.items():
+                self.__setattr__(k, v)
