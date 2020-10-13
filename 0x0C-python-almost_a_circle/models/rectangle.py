@@ -78,4 +78,7 @@ class Rectangle(Base):
     def display(self):
         ''' method display the stdout # '''
         print((('#' * self.__width + "\n") *
-                self.__height)[:-1])
+               self.__height)[:-1])
+
+    def __str__(self):
+        return self.name
