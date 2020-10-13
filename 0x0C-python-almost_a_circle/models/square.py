@@ -29,17 +29,22 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-            """Update the square with keyword-argument"""
-            attributes = ['id', 'size', 'x', 'y']
+        """Update the square with keyword-argument"""
+        attributes = ['id', 'size', 'x', 'y']
 
-            for idx, x in enumerate(args):
-                if idx >= len(attributes):
-                    return
-
-                self.__setattr__(attributes[idx], x)
-
-            if args:
+        for idx, x in enumerate(args):
+            if idx >= len(attributes):
                 return
 
-            for k, v in kwargs.items():
-                self.__setattr__(k, v)
+            self.__setattr__(attributes[idx], x)
+
+        if args:
+            return
+
+        for k, v in kwargs.items():
+            self.__setattr__(k, v)
+
+    def to_dictionary(self):
+        ''' representation dict '''
+        return {'id': self.id, 'size': self.size,
+                'x': self.x, 'y': self.y}
