@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 ''' module base '''
 
+import json
+
 
 class Base:
     """base
@@ -14,3 +16,11 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        ''' json string '''
+        if list_dictionaries is None:
+            list_dictionaries = '[]'
+        else:
+            return json.dumps(list_dictionaries)
