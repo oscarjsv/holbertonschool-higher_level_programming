@@ -41,7 +41,7 @@ class Base:
     def from_json_string(json_string):
         ''' from json string '''
         json_list = []
-        if json_string is None:
+        if json_string:
             return json_list
         else:
             return  json.loads(json_string)
