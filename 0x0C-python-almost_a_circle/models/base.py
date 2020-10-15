@@ -36,3 +36,12 @@ class Base:
 
         with open(filename, 'w') as f:
             f.write(cls.to_json_string(num))
+    
+    @staticmethod
+    def from_json_string(json_string):
+        ''' from json string '''
+        json_list = []
+        if json_string is None:
+            return json_list
+        else:
+            return  json.loads(json_string)
