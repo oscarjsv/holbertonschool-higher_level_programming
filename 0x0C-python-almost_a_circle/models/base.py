@@ -43,5 +43,4 @@ class Base:
         json_list = []
         if not json_string:
             return json_list
-        else:
-            return  json.loads(json_string)
+        return  json.loads(json_string)
