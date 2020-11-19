@@ -1,3 +1,4 @@
+-- comentario
 SELECT tv_genres.name
 FROM tv_shows
 RIGHT JOIN tv_genres
