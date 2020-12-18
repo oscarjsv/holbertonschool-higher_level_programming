@@ -1,3 +1,3 @@
 #!/bin/bash
 #delete
-curl -sX delete "$1"
+curl -s delete "$1"
